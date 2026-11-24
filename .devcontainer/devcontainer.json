@@ -1,0 +1,16 @@
+{
+  "name": "C/C++ WebAssembly (Emscripten)",
+  "postCreateCommand": "sudo git clone https://github.com/emscripten-core/emsdk.git /opt/emsdk && sudo /opt/emsdk/emsdk install latest && sudo /opt/emsdk/emsdk activate latest",
+  "remoteEnv": {
+    "EMSDK": "/opt/emsdk",
+    "PATH": "/opt/emsdk:/opt/emsdk/upstream/emscripten:${containerEnv:PATH}"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.live-server"
+      ]
+    }
+  }
+}
